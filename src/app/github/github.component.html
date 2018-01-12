@@ -1,7 +1,7 @@
 <div *ngIf ="profile" >
   <div class ="panel panel-default">
     <div class="panel-heading">
-      {{profile.login}} has repos at <small>{{profile.repos_url}}</small>
+      My name is {{profile.name}} and I live in <small>{{profile.location}}</small>
 </div>
 <div class="panel-body">
   <div class="row">
@@ -11,12 +11,20 @@
 <div class="col-sm-5">
   <ul class="list-group">
     <li class="list-group-item" *ngIf="profile.bio">Bio:{{profile.bio}} </li>
-    <li class="list-group-item" *ngIf="profile.bio">Created at:{{profile.created_at}} </li>
-    <li class="list-group-item" *ngIf="profile.bio">Number of repos:{{profile.public_repos}} </li>
-    <li class="list-group-item" *ngIf="profile.bio">Repos can be found at:{{profile.repos_url}} </li>
+    <li class="list-group-item" *ngIf="profile.created_at">Created at:{{profile.created_at}} </li>
+    <li class="list-group-item" *ngIf="profile.public_repos">Number of repos:{{profile.public_repos}} </li>
+    <li class="list-group-item" *ngIf="profile.repos_url">Repos can be found at:<a href="click this link:{{profile.repos_url}}">{{profile.repos_url}}</a> </li>
 
   </ul>
 </div>
+<div class="col-sm-4">
+  <p>
+<span class="label label default">{{profile.followers}} Followers</span>
+<span class="label label default">{{profile.followers}} FOllowers</span>
+<span class="label label default">{{profile.followers}} FOllowers</span>
+<span class="label label default">{{profile.followers}} FOllowers</span>
+
+  </p>
 </div>
 </div>
 </div>
