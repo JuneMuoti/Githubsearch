@@ -22,4 +22,3 @@ getGithubRepos(){
 .map(res => res.json());
 }
 }
-}
