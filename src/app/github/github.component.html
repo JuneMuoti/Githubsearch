@@ -12,20 +12,31 @@
   <ul class="list-group">
     <li class="list-group-item" *ngIf="profile.bio">Bio:{{profile.bio}} </li>
     <li class="list-group-item" *ngIf="profile.created_at">Created at:{{profile.created_at}} </li>
-    <li class="list-group-item" *ngIf="profile.public_repos">Number of repos:{{profile.public_repos}} </li>
     <li class="list-group-item" *ngIf="profile.repos_url">Repos can be found at:<a href="click this link:{{profile.repos_url}}">{{profile.repos_url}}</a> </li>
 
   </ul>
 </div>
 <div class="col-sm-4">
+  <div>
   <p>
-<span class="label label default">{{profile.followers}} Followers</span>
-<span class="label label default">{{profile.followers}} FOllowers</span>
-<span class="label label default">{{profile.followers}} FOllowers</span>
-<span class="label label default">{{profile.followers}} FOllowers</span>
-
+    <span class="label label-default">{{profile.followers}} Followers</span>
+    <span class="label label-success">{{profile.following}} Following</span>
+    <span class="label label-primary">{{profile.public_repos}} Repos</span>
   </p>
+  <p><a href="{{profile.html_url}}" class="btn btn-success btn-sm">View profile on Github</a></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="pane;-title">Repos</h3>
 </div>
+
+<div class="panel-body" *ngFor="let repo of repos">
+<p class="clearfix">
+  {{repo.name}} <a href="{{repo.html_url}}"class="btn btn-sm btn-warning pull-right" target="_blank">View this project on github</a>
+</p>
+<p>{{repo.description}}</p>
+    </div>
+  </div>
+  </div>
 </div>
 </div>
 </div>
