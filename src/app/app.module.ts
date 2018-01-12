@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { GithubComponent } from './github/github.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpModule} from '@angular/http';
+import {GithubService} from './Services/github.service'
+
 
 
 @NgModule({
@@ -16,12 +18,13 @@ import {HttpClientModule} from '@angular/common/http'
     RepositoriesComponent,
     GithubComponent,
 
+
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpModule
   ],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {GithubService} from '../Services/github.service'
 
 @Component({
   selector: 'app-github',
@@ -8,14 +8,13 @@ import {HttpClient} from '@angular/common/http';
 })
 export class GithubComponent implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private githubService:GithubService) {
+this.githubService.getGithubInfo().subscribe(profile => {
+  console.log(profile)
+});
+   }
 
   ngOnInit() {
-    this.http.get('https://api.github.com/users/JuneMuoti?access_token=c3a680e6c64344d10aaa827ff43b116aec5ded6b'
-).subscribe(data => {
-  console.log(data);
-})
-
 
 
   }
