@@ -1,3 +1,23 @@
-<p>
-  github works!
-</p>
+<div *ngIf ="profile" >
+  <div class ="panel panel-default">
+    <div class="panel-heading">
+      {{profile.login}} has repos at <small>{{profile.repos_url}}</small>
+</div>
+<div class="panel-body">
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="{{profile.avatar_url}}"class="img-circle img-responsive" alt ="">
+</div>
+<div class="col-sm-5">
+  <ul class="list-group">
+    <li class="list-group-item" *ngIf="profile.bio">Bio:{{profile.bio}} </li>
+    <li class="list-group-item" *ngIf="profile.bio">Created at:{{profile.created_at}} </li>
+    <li class="list-group-item" *ngIf="profile.bio">Number of repos:{{profile.public_repos}} </li>
+    <li class="list-group-item" *ngIf="profile.bio">Repos can be found at:{{profile.repos_url}} </li>
+
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>

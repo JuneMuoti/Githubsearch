@@ -7,10 +7,11 @@ import {GithubService} from '../Services/github.service'
   styleUrls: ['./github.component.css']
 })
 export class GithubComponent implements OnInit {
-
+profile:any[];
   constructor(private githubService:GithubService) {
 this.githubService.getGithubInfo().subscribe(profile => {
   console.log(profile)
+  this.profile = profile;
 });
    }
 
