@@ -5,16 +5,21 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { GithubComponent } from './github/github.component';
+import {HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    GithubComponent,
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
