@@ -8,6 +8,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { GithubComponent } from './github/github.component';
 import {HttpModule} from '@angular/http';
 import {GithubService} from './Services/github.service'
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -22,7 +23,8 @@ import {GithubService} from './Services/github.service'
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]
