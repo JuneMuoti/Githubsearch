@@ -24,6 +24,11 @@ username:string;
        this.repos = repos;
      })
    }
+   getMyInfo(){
+     this.githubService.getMyInfo().subscribe(profile => {
+       console.log(profile)
+     })
+   }
 
   ngOnInit() {}
 
