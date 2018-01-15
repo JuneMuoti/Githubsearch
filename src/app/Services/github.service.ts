@@ -12,9 +12,7 @@ export class GithubService {
   console.log("service is now ready!");
 this.username ='JuneMuoti'
  }
- getMyInfo(){
-   return this.http.get("https://api.github.com/JuneMuoti/").map(res => res.json());
- }
+
  getGithubInfo (){
    return this.http.get ("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
 .map(res => res.json());
