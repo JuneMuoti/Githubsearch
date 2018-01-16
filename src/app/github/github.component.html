@@ -2,7 +2,9 @@
 
 <form action="" class="search-form">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder ="Search github users with their username"[(ngModel)]="username" name="username" (keyup)="findProfile()">
+    <label> Enter name below to Search for any  github user </label>
+    <input type="text" class="form-control" placeholder =""[(ngModel)]="username" name="username" (keyup)="findProfile()">
+
 </div>
 </form>
 <div *ngIf ="profile" >
